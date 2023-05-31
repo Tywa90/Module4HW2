@@ -20,13 +20,20 @@ WHERE BirthDate > '1989-09-28'
 LoginID is 0. Output only NationalIDNumber, LoginID, JobTitle. Data must be sorted by
 JobTitle by kill
 
-
+SELECT NationalIDNumber, LoginID, JobTitle 
+FROM AdventureWorks.HumanResources.Employee
+WHERE LoginID LIKE '%0'
+ORDER BY JobTitle DESC
 
 5. Retrieve from the Person.Person table all information about records that have been
 updated in 2008 (ModifiedDate) and MiddleName contains value and Title does not contain
 a value
 
-
+SELECT *
+FROM Person.Person
+WHERE (ModifiedDate BETWEEN '2008-01-01 00:00:00.000' AND '2008-12-31 00:00:00.000')
+  AND MiddleName IS NOT NULL
+  AND Title IS NULL
 
 6. Display department name (HumanResources.Department.Name) WITHOUT repetition in
 which there are employees . Use HumanResources.EmployeeDepartmentHistory and
