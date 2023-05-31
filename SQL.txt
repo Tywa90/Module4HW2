@@ -63,7 +63,11 @@ WHERE VacationHours = (SELECT MAX(VacationHours) FROM HumanResources.Employee)
 (HumanResources.Employee.JobTitle) 'Sales Representative' or 'Network Administrator' or
 'Network Manager'
 
-
+SELECT *
+FROM HumanResources.Employee
+WHERE JobTitle = 'Sales Representative'
+  OR JobTitle = 'Network Administrator'
+  OR JobTitle = 'Network Manager'
 
 
 10. Display all employee information (HumanResources.Employee) and their orders
