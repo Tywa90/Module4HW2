@@ -73,3 +73,7 @@ WHERE JobTitle = 'Sales Representative'
 10. Display all employee information (HumanResources.Employee) and their orders
 (Purchasing.PurchaseOrderHeader). IF THE EMPLOYEE DOES NOT HAVE ORDERS
 SHOULD BE DISPLAYED TOO!!!
+
+SELECT *
+FROM HumanResources.Employee E
+RIGHT JOIN Purchasing.PurchaseOrderHeader P ON P.EmployeeID = E.BusinessEntityID
