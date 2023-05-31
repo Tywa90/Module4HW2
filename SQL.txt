@@ -1,0 +1,56 @@
+1. Retrieve all information from the Sales.Customer table
+
+SELECT *
+FROM AdventureWorks.Sales.Customer;
+
+2. Retrieve all information from the Sales.Store table sorted by Name in alphabetical order
+
+SELECT *
+FROM AdventureWorks.Sales.Store
+ORDER BY Name
+
+3. Retrieve all information from the HumanResources.Employee table about ten employees
+who were born after 1989-09-28
+
+SELECT TOP 10 * 
+FROM AdventureWorks.HumanResources.Employee
+WHERE BirthDate > '1989-09-28'
+
+4. Retrieve employees from the HumanResources.Employee table whose last character of
+LoginID is 0. Output only NationalIDNumber, LoginID, JobTitle. Data must be sorted by
+JobTitle by kill
+
+
+
+5. Retrieve from the Person.Person table all information about records that have been
+updated in 2008 (ModifiedDate) and MiddleName contains value and Title does not contain
+a value
+
+
+
+6. Display department name (HumanResources.Department.Name) WITHOUT repetition in
+which there are employees . Use HumanResources.EmployeeDepartmentHistory and
+HumanResources.Department tables
+
+
+
+7. Group data from Sales.SalesPerson table by TerritoryID and print the amount of
+CommissionPct if it is greater than 0
+
+
+
+8. Display all employee information (HumanResources.Employee) which have the largest
+number vacations (HumanResources.Employee.VacationHours)
+
+
+
+9. Display all employee information (HumanResources.Employee) which have a position
+(HumanResources.Employee.JobTitle) 'Sales Representative' or 'Network Administrator' or
+'Network Manager'
+
+
+
+
+10. Display all employee information (HumanResources.Employee) and their orders
+(Purchasing.PurchaseOrderHeader). IF THE EMPLOYEE DOES NOT HAVE ORDERS
+SHOULD BE DISPLAYED TOO!!!
