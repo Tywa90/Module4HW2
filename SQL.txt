@@ -55,7 +55,9 @@ GROUP BY TerritoryID
 8. Display all employee information (HumanResources.Employee) which have the largest
 number vacations (HumanResources.Employee.VacationHours)
 
-
+SELECT *
+FROM HumanResources.Employee
+WHERE VacationHours = (SELECT MAX(VacationHours) FROM HumanResources.Employee)
 
 9. Display all employee information (HumanResources.Employee) which have a position
 (HumanResources.Employee.JobTitle) 'Sales Representative' or 'Network Administrator' or
